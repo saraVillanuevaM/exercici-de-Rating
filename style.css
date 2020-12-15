@@ -33,7 +33,7 @@ display: none;
 /* before capa check por defecto */
 
 .rating label:before{
-content:url(/img/star-regular.svg);
+content:url(img/star-regular.svg);
 width: 50px;
 position: relative;
 display: block;
@@ -41,7 +41,7 @@ display: block;
 
 /* after capa check activo */
 .rating label:after{
-content:url(/img/star-solid.svg);
+content:url(img/star-solid.svg);
 width: 50px;
 position: absolute;
 display: block;
