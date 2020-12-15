@@ -1,0 +1,61 @@
+
+
+body{
+  margin: 0;
+  padding: 0;
+  
+}
+
+.rating{
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  justify-self: center;
+
+  /* dirección hover */
+  direction: rtl;
+}
+
+/* quita elimina el type radio original */
+.rating input{
+display: none;
+}
+
+.rating label{
+  cursor: pointer;
+}
+/* ////////////////////////////////////////////////////check action */
+
+
+/* before capa check por defecto */
+
+.rating label:before{
+content:url(/img/star-regular.svg);
+width: 50px;
+position: relative;
+display: block;
+}
+
+/* after capa check activo */
+.rating label:after{
+content:url(/img/star-solid.svg);
+width: 50px;
+position: absolute;
+display: block;
+
+/* rating y after elementos sin opacidad */
+top: 0;
+opacity: 0;
+transition: .5s;
+
+}
+/* con esta suma se activa la opacidad de los elementos comunes e individuales en hover y checked */
+  .rating label:hover:after,
+  .rating label:hover~label:after,
+  .rating input:checked~label:after{
+
+    opacity: 1;
+  }
